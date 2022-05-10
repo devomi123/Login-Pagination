@@ -1,0 +1,29 @@
+<form action="" [formGroup]="formdata">
+  <div class="container text-center mt-5">
+    <div style="border: 2px solid; height: 500px; background-color: rgb(240, 194, 125);">
+  <div class="login">
+    <label for="">Username :</label>
+  <input class="form-control" type="text" formControlName="username" [ngModel]="username">
+  </div>
+  <div class="pass mt-3">
+    <label for="">Password :</label>
+  <input class="form-control" type="password" formControlName="password" [ngModel]="password">
+  </div>
+  <div>
+
+
+    <button class="btn btn-primary mt-5" type="submit" [disabled]="!formdata.valid" (click)="submitdata(formdata.value)" >Login</button>&nbsp;
+
+
+    <!-- <a routerLink="register"><button class="btn btn-dark mt-5" type="submit" name="register" >register</button></a> -->
+
+  </div>
+
+
+    </div>
+  </div>
+
+</form>
+
+
+
